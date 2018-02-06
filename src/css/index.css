@@ -1,0 +1,57 @@
+/**
+* @插入的样式
+*/
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#main{
+    width: 100%;
+    flex-flow:row;
+}
+
+.v-head_squre{
+    width: 100%;
+    height: 72px;
+    min-width: 1200px;
+    background-color: #373D41;
+}
+
+.v-menu_squre{
+    width: 200px;
+    height: 100%;
+    background-color:#545c64;
+}
+
+.container{
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
+}
+
+.router{
+    width: 100%;
+    height: 40px;
+    border: 1px solid black
+}
+
+
+/**功能性css**/
+
+.font-pos-center{
+    text-align: center;
+}
+
+.pos-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.bg-url{
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat;
+}
