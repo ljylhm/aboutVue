@@ -5,6 +5,19 @@ var helper = {
     init: function (_router) {
         router = _router;
     },
+    // 获得字符串中某个字符的数量
+    getCharNum:function(str1,str2){
+        if(!str1 || !str2){
+            console.error('getCharNum params is not allowed undefined or null');
+        }
+        var count = 0;
+        var reg = new RegExp(str2,'g');
+
+        str1.replace(reg,()=>{
+            count++
+        })
+        return count;
+    },
 
     getDataType: function (obj) {
         if (!obj) return;

@@ -1,9 +1,12 @@
 <template>
     <div class="v-menu_squre">
        <div class="menu-all">
-           <el-menu  background-color="#545c64" :unique-opened=true active-text-color="#ffd04b" text-color="#ffffff">
-             
-             <el-submenu index="1">
+           <el-menu  background-color="#545c64" 
+                     :unique-opened=true 
+                     active-text-color="#ffd04b" 
+                     text-color="#ffffff"
+                     :router=true>
+             <el-submenu index="/index">
                  <template slot="title">
                  <i class="el-icon-news"></i>
                  <span>个人信息</span>

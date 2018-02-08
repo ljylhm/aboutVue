@@ -16,6 +16,9 @@ body{
 .v-head_squre{
     width: 100%;
     height: 72px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     min-width: 1200px;
     background-color: #373D41;
 }
@@ -23,35 +26,68 @@ body{
 .v-menu_squre{
     width: 200px;
     height: 100%;
+    position: fixed;
+    top: 72px;
+    left: 0px;
     background-color:#545c64;
 }
 
-.container{
-    width: 100%;
-    height: 600px;
-    border: 1px solid black;
+#router{
 }
-
-.router{
-    width: 100%;
-    height: 40px;
-    border: 1px solid black
-}
-
 
 /**功能性css**/
 
 .font-pos-center{
     text-align: center;
 }
-
 .pos-center{
     position: absolute;
     left: 50%;
     top: 50%;
 }
+.pos-center-top{
+    position: absolute;
+    top: 50%;
+}
+.pos-center-left{
+    position: absolute;
+    left: 50%;
+}
 
 .bg-url{
     background-size: 100% 100% !important;
     background-repeat: no-repeat;
+}
+.prompt{
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    font-size:14px;
+    background-color:#F9F9F9;
+    color:#555 
+}
+
+/**常用的样式 例如按钮,表格.....的样式**/
+.btn{
+    box-sizing: border-box;
+    padding: 0px 15px 0px 15px; 
+    background-color: #0099CC;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;     
+}
+
+.btn-small{
+    height: 20px; 
+    line-height: 20px;   
+}
+
+.btn-middle{
+    height: 30px; 
+    line-height: 30px;
+}
+
+.btn-large{
+    height: 40px; 
+    line-height: 40px;
 }

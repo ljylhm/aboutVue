@@ -44,6 +44,7 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js',
             '@':path.resolve(__dirname, './src/js'),
+            '@dir':path.resolve(__dirname,'./src/directive')
         }
     },
 

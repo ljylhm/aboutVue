@@ -6,38 +6,56 @@ import Vue from 'vue';
 import VueRouter from 'vue-router'
 import router from './routes';
 import helper from './js/helper';
-import VHead from './layout/VHead';
-import VMenu from './layout/VMenu';
-import components from './layout/ref';
+import VDisplay from './layout/VDisplay';
+import './layout/ref';
+import '@dir/dir'
 import $ from 'jquery';
 
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 
 helper.init(router);
-helper.routerGo('/index');
+helper.routerGo('/personInfo/personInfoGet');
 
-var resizeSquare = function () {
-    
-    var _client_height = window.innerHeight,
-        _nav_height = $('#head').height(),
-        _menu_height = _client_height - _nav_height;
+var getSize = () =>{
+    return{
+        "_menu_height": window.innerHeight - $('#head').height(),
+        "_route_width": window.innerWidth - $('#menu').width(),
+        "_menu_width": $('#menu').width(),
+        "_nav_height":$('#head').height()
+    }
+}
 
-    $('#menu').height(_menu_height);
+var resizeSquare = () => {
+        $('#menu').height(getSize()._menu_height);
+}
+
+var resizeRouterView = () =>{
+    $('#router')[0].style.width=getSize()._route_width;
+    $('#router').css({
+        "min-height":getSize()._menu_height,
+        "marginLeft":getSize()._menu_width,
+        "marginTop":getSize()._nav_height,
+        "padding-left":15,
+        "padding-right":15,
+        "box-sizing":"border-box"
+    });
 }
 
 const app = new Vue({
     el: '#app',
     data: function () {
         return {
-            message: 2313123,
             name:'学习管理系统'
         }
     },
     mounted: function () {
-        resizeSquare();        
-        window.onresize = resizeSquare;
+        resizeSquare(); 
+        resizeRouterView();       
+        window.onresize = ()=>{
+            resizeSquare(); 
+            resizeRouterView();
+        }
     },
-    components: components,
     router: router
 })
