@@ -60,6 +60,7 @@ const app = new Vue({
     router: router
 })
 
+// 路由守卫 进入路由前校验
 router.beforeEach((to,from,next)=>{
-    console.log('来自于',to)
+    next();
 })

@@ -93,6 +93,7 @@ var helper = {
     },
     // 路由传值 args需要为json格式 
     routerGo: function (url, args) {
+        
         if (!url) return;
         if (!args) {
             router.push(url);

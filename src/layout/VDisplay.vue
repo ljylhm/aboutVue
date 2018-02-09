@@ -1,7 +1,7 @@
 <template>
     <div class="container">
          <div class="diplay-info">
-             <div class="display-info_item">{{message1}}>{{message2}}</div>
+             <div class="display-info_item">{{navInfo}}</div>
          </div>
          <div class="diplay-btn" v-if="isShowBtn == true">
               <div class="btn btn-middle display-btn_item">
@@ -14,24 +14,15 @@
 <script>
     import helper from '@/helper'  
 
-    // var i = 0;
-    // var reg = /b/g;
-    // var str = 'abcdebfsl';
-    // console.log(str.replace(reg,function(){
-    //     i++
-    // }))
-    
-
     export default { 
          data:function(){
              return{
-                 message1:"个人信息",
-                 message2:"查看信息",
+                 navInfo:null,                
                  btnMseeage:"点击查看"
              }
          },
          created:function(){
-           console.log(this.$route)
+           this.navInfo = this.$route.name
          },
          mounted:function(){
             
