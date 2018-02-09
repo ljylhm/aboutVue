@@ -19,6 +19,68 @@ var helper = {
         return count;
     },
 
+    // 清除数组中的重复项
+    clearRepeate:function(arr,callback){
+         if(this.getDataType(arr)!="Array"){
+             console.error('the type of arg must be Array!');
+             return; 
+         }
+
+         var a = new Set(arr);
+         a = Array.from(a);
+         callback && callback(a);
+         return a;
+    },
+
+    // 数组中如果是对象的话的去重
+    clearRepeateObj:function (arr, id, i,callback){       
+        if(this.getDataType(arr)!="Array"){
+            console.error('the type of arg must be Array!');
+            return; 
+        }
+        var i = i || 0,
+            id = id || 0,
+            template = arr[i][id],
+            len = arr.length,
+            repeateArr = [];
+    
+        for (var j = i + 1; j < len; j++) {
+            if (arr[j][id] == template) {
+                repeateArr.push(j)
+            }
+        }
+    
+        repeateArr.forEach(function(vaule,index){
+            index == 0 ? arr.splice(vaule,1):arr.splice(vaule-1,1);
+        });
+    
+        if (i<=arr.length-2){
+            i++;
+            clear(arr,id,i,callback)
+        } else{
+            callback(arr);
+        }
+    },
+
+    // 利用reduce的数组去重
+ 
+    reduceClearRepeate(arr,id){
+        if(this.getDataType(arr)!="Array"){
+            console.error('the type of arg must be Array!');
+            return; 
+        }
+  
+        var obj = {};
+
+        arr = arr.reduce((cur,next)=>{
+            obj[next[id]] ? "" : obj[next[id]] = true && cur.push(next);
+            return cur; 
+        },[])
+
+        return arr;
+    }, 
+    
+    // 获取数据类型
     getDataType: function (obj) {
         if (!obj) return;
         var _type = '',

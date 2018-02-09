@@ -14,7 +14,6 @@
 <script>
     import helper from '@/helper'  
 
-    console.log(helper.getCharNum('abcdebfsl','b'));
     // var i = 0;
     // var reg = /b/g;
     // var str = 'abcdebfsl';

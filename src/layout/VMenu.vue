@@ -5,14 +5,15 @@
                      :unique-opened=true 
                      active-text-color="#ffd04b" 
                      text-color="#ffffff"
-                     :router=true>
-             <el-submenu index="/index">
+                     :router=false
+                     @select = "handleOpen">
+             <el-submenu index="1">
                  <template slot="title">
                  <i class="el-icon-news"></i>
                  <span>个人信息</span>
                  </template>
                  <el-menu-item-group>
-                     <el-menu-item index="1-1">查看信息</el-menu-item>
+                     <el-menu-item index="1-1" route="/index">查看信息</el-menu-item>
                      <el-menu-item index="1-2">修改信息</el-menu-item>
                  </el-menu-item-group>
              </el-submenu>
@@ -37,6 +38,11 @@
 export default {
   data: function() {
     return {};
+  },
+  methods:{
+      handleOpen:function(key, keyPath){
+          console.log(key, keyPath);
+      }
   }
 };
 </script>

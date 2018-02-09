@@ -17,6 +17,7 @@
 import helper from "@/helper";
 import $ from "jquery";
 export default {
+  getName:'个人信息',
   data: function() {
     return {
       alertInfo:"<span><b>提醒 : </b>以下联系人都可设置为消息接收人，同程不会将这些信息对外披露或向第三方提供。</span>",

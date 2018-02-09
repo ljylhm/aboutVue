@@ -6,6 +6,7 @@
 
 <script>
     export default {
+        getName:"个人信息>查看信息",
         data:function(){
            return{
               message:"info come from personInfoGet"

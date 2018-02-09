@@ -17,28 +17,28 @@ Vue.use(ElementUI);
 helper.init(router);
 helper.routerGo('/personInfo/personInfoGet');
 
-var getSize = () =>{
-    return{
+var getSize = () => {
+    return {
         "_menu_height": window.innerHeight - $('#head').height(),
         "_route_width": window.innerWidth - $('#menu').width(),
         "_menu_width": $('#menu').width(),
-        "_nav_height":$('#head').height()
+        "_nav_height": $('#head').height()
     }
 }
 
 var resizeSquare = () => {
-        $('#menu').height(getSize()._menu_height);
+    $('#menu').height(getSize()._menu_height);
 }
 
-var resizeRouterView = () =>{
-    $('#router')[0].style.width=getSize()._route_width;
+var resizeRouterView = () => {
+    $('#router')[0].style.width = getSize()._route_width;
     $('#router').css({
-        "min-height":getSize()._menu_height,
-        "marginLeft":getSize()._menu_width,
-        "marginTop":getSize()._nav_height,
-        "padding-left":15,
-        "padding-right":15,
-        "box-sizing":"border-box"
+        "min-height": getSize()._menu_height,
+        "marginLeft": getSize()._menu_width,
+        "marginTop": getSize()._nav_height,
+        "padding-left": 15,
+        "padding-right": 15,
+        "box-sizing": "border-box"
     });
 }
 
@@ -46,16 +46,20 @@ const app = new Vue({
     el: '#app',
     data: function () {
         return {
-            name:'学习管理系统'
+            name: '学习管理系统'
         }
     },
     mounted: function () {
-        resizeSquare(); 
-        resizeRouterView();       
-        window.onresize = ()=>{
-            resizeSquare(); 
+        resizeSquare();
+        resizeRouterView();
+        window.onresize = () => {
+            resizeSquare();
             resizeRouterView();
         }
     },
     router: router
+})
+
+router.beforeEach((to,from,next)=>{
+    console.log('来自于',to)
 })
