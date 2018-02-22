@@ -4,7 +4,7 @@
              <div class="display-info_item">{{navInfo}}</div>
          </div>
          <div class="diplay-btn" v-if="isShowBtn == true">
-              <div class="btn btn-middle display-btn_item">
+              <div class="btn btn-middle display-btn_item" @click="butClick(btnMseeage)">
                     {{btnMseeage}}
               </div>
          </div>
@@ -20,6 +20,11 @@
                  navInfo:null,                
                  btnMseeage:"点击查看"
              }
+         },
+         methods:{
+            butClick:function(val){
+                this.$emit('displayBtnClick',val)
+            }
          },
          created:function(){
            this.navInfo = this.$route.name

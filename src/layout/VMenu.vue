@@ -12,8 +12,8 @@
                  <span>个人信息</span>
                  </template>
                  <el-menu-item-group>
-                     <el-menu-item index="/index">查看信息</el-menu-item>
-                     <el-menu-item index="1-2">修改信息</el-menu-item>
+                     <el-menu-item index="/personInfo/personInfoGet">查看信息</el-menu-item>
+                     <el-menu-item index="/personInfo/personInfoUpDate">修改信息</el-menu-item>
                  </el-menu-item-group>
              </el-submenu>
 

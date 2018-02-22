@@ -15,7 +15,7 @@ Vue.use(VueRouter);
 Vue.use(ElementUI);
 
 helper.init(router);
-helper.routerGo('/personInfo/personInfoGet');
+helper.routerGo('/index');
 
 var getSize = () => {
     return {
@@ -49,6 +49,10 @@ const app = new Vue({
             name: '学习管理系统'
         }
     },
+    created:function(){
+       var lastPath = helper.sessionGet('lastPath') ||　'/index';
+       helper.routerGo(lastPath); 
+    },
     mounted: function () {
         resizeSquare();
         resizeRouterView();
@@ -63,4 +67,10 @@ const app = new Vue({
 // 路由守卫 进入路由前校验
 router.beforeEach((to,from,next)=>{
     next();
+})
+
+// 离开路由时
+router.afterEach((to,from,next) => {
+    // 路由刷新时进入当前route
+    helper.sessionSet('lastPath',to.path);
 })

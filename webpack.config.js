@@ -50,9 +50,16 @@ module.exports = {
 
     devServer: {
         historyApiFallback: true,
-        host: '10.101.70.49',
+        host: '10.101.70.31',
         port: 8086,
-        noInfo: false
+        noInfo: false,
+        proxy: {
+            '/liangInfoGet/**': {
+                target: 'http://10.101.70.31:3000',
+                secure: false,
+                changeOrigin: true
+            }
+        }
     }
 
 }

@@ -57,14 +57,13 @@ export default {
     }
   },
   created:function(){
-       this.mIsShowPage = this.isShowPage || true,
+       this.mIsShowPage = this.isShowPage || false,
        this.mCurrentPage = this.currentPage || 1,
        this.mPageSizeList = this.pageSizeList || [10,20,30,50],
        this.mPageSize = this.pageSize || this.mPageSizeList[0];
        this.mTotalSize = this.totalSize || 0
   },
   mounted:function(){
-     
   },
   props:["isShowPage","pageSizeList","currentPage","pageSize","totalSize","alertInfo"]
 };
