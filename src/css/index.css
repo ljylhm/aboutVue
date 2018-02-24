@@ -8,6 +8,10 @@ body{
     padding: 0px;
 }
 
+label,p{
+    margin: 0px;
+    padding: 0px;
+}
 #main{
     width: 100%;
     flex-flow:row;
