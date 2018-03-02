@@ -15,8 +15,9 @@
         },
         methods:{
            displayBtnClick:function(val){
-              helper.httpGet("/liangInfoGet/",{},{
-                  
+              console.log("来到这里......"); 
+              helper.httpPost("http://10.101.70.31:3000").then((res)=>{
+                  console.log(res);
               })
            }
         },

@@ -1,7 +1,7 @@
+import 'element-ui/lib/theme-chalk/index.css';
 import './css/index.css';
 import "./js/common";
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import Vue from 'vue';
 import VueRouter from 'vue-router'
 import router from './routes';
@@ -42,15 +42,40 @@ var resizeRouterView = () => {
     });
 }
 
+var mixin = {
+    data:function(){
+        return {
+            message:'this is a message from mixin'
+        }
+    },
+    created:function(){
+       console.log(this.message);
+    },
+    methods:{
+        intoMixin:function(){
+
+        }
+    } 
+}
+
 const app = new Vue({
     el: '#app',
+    mixins:[mixin],
     data: function () {
         return {
-            name: '学习管理系统'
+            name: '学习管理系统',
+        }
+    },
+    methods:{
+        dialogClose:function(){
+            console.log("打开关闭函数......");
+            this.dialogVisiable = false;
         }
     },
     created:function(){
        var lastPath = helper.sessionGet('lastPath') ||　'/index';
+       console.log("this is a message from original.....")
+       console.log(this.$data);
        helper.routerGo(lastPath); 
     },
     mounted: function () {

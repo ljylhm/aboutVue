@@ -54,10 +54,15 @@ module.exports = {
         port: 8086,
         noInfo: false,
         proxy: {
-            '/liangInfoGet/**': {
-                target: 'http://10.101.70.31:3000',
+            "/cube": {
+                target: "http://10.101.68.29:8081/cube",
                 secure: false,
                 changeOrigin: true
+            },
+            "/liangGetInfo":{
+                target: "http://10.101.70.31:3000",
+                secure: false,
+                changeOrigin: true 
             }
         }
     }

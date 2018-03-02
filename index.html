@@ -9,14 +9,32 @@
 </head>
 
 <body>
+
     <div id="app">
+
+        <!-- 弹出登陆框 -->
+        <!-- <el-dialog :visible="dialogVisiable" :show-close="false" @close="dialogClose" :close-on-click-modal="false">
+            <div slot="title" class="dialog-title">
+                登录
+            </div>
+
+            <div class="diglog-middle">
+                <el-form v-model="LoginForm">
+                    <el-form-item label="手机号或email">
+                        <el-input class=""></el-input>
+                    </el-form-item>
+                </el-form>
+            </div>
+        </el-dialog> -->
+        <v-login></v-login> 
+
         <v-head id="head" :name="name"></v-head>
         <v-menu id="menu"></v-menu>
         <div id="router">
             <router-view></router-view>
         </div>
-        
     </div>
+
 </body>
 <script src="./dist/js/index.js?201802061852"></script>
 
