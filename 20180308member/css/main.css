@@ -1,0 +1,259 @@
+/* 会员日活动的css */
+.body{
+   background-color: #E9ECD7;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+   width: 100%;
+   height: 40px;
+   font-size: 32px;
+   border: 1px solid black; 
+}
+
+/*--------头部--------*/
+.head{
+    width: 100% ;
+    height: 546px;
+    background: url('../img/head.png') no-repeat;
+}
+
+/*--------天天限量抢--------*/
+.xsq{
+   width: 100%;
+   height: 922px;
+   position: relative;
+   z-index:10;
+   top: -20px;
+   background: url('../img/dayday.png') no-repeat;
+}
+.xsq-head{
+   width: 100%;
+   height: 140px;
+   border: 1px solid transparent;
+}
+.xsq-head_title{
+    width: 220px;
+    height: 40px;
+    margin: 65px auto 0px auto;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing:4px;
+    color:#7DB03D;
+ }
+ .xsq-line{
+    width: 100%;
+    height: 102px;
+ }
+ .xsq-line_item1{
+    width: 671px;
+    height: 69px;
+    margin: 0 auto; 
+ }
+ .xsq-line_item1_shape{
+    width: 615px;
+    height: 8px;
+    position: relative;
+    z-index:20;
+    border: 1px solid #89AD4A;
+    border-left:none;
+    background-color: #ABD673;
+ }
+.xsq-prize{
+    width: 620px;
+    height: 604px;
+    margin: 0 auto;
+}
+.xsq-prize_item{
+    width: 292px;
+    height: 282px;
+    float: left;
+    background: url("../img/dayday-item.png") no-repeat;
+}
+.xp_item_head{
+    width: 100%;
+    height: 45px;
+}
+.xp_item_head p{
+    color: #ABABAB;
+    float: left;
+    font-size:20px;
+    padding-left: 25px;
+    line-height: 45px;
+}
+.xp_item_progress{
+    float: left;
+    width: 160px;
+    height: 100%;
+}
+.xip_1{
+    width: 140px;
+    height: 16px;
+    position: relative;
+    top: 50%;
+    left: 8px;
+    margin-top: -10px;
+    border-radius: 15px;
+    background-color: #FFE3D5;
+}
+.xip_1 div{
+    width: 70%;
+    height: 100%;
+    background-color: #FFA579;
+    border-radius: 15px;
+}
+.xp_item_money{
+    width: 100%;
+    height:107px;
+    box-sizing: border-box;
+    padding: 20px 0px 17px 0px;
+}
+.xp_train{
+    width: 188px;
+    height: 70px;
+    margin: 0 auto; 
+}
+.xp_huafei{
+    width: 230px;
+    height: 70px;
+    margin: 0 auto;
+}
+.xp_item_licheng{
+    width: 100%;
+    height: 66px;
+    box-sizing: border-box;
+    padding: 8px 0px 15px 0px;
+}
+.xp_item_btn{
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 64px;
+    color: #CA6010;
+    letter-spacing: 4px;
+}
+
+/*--------hylb--------*/
+.hylb{
+    width: 100%;
+    height: 310px;
+    position: relative;
+    top:-35px;
+    z-index:5;
+    background: url("../img/hylb.png") no-repeat;
+}
+
+.hylc_btn{
+    width: 135px;
+    height: 142px;
+    position: absolute;
+    right: 46px;
+    top : 90px;
+    background: url("../img/hylb-btn.png");
+}
+
+/*--------侧边栏导航--------*/
+.slide-bar{
+    width: 48px;
+    position: fixed;
+    z-index:1000;
+    top: 328px;
+    right: 0px;
+    background-color: #F9BA8C;
+    color:#C16A29;
+    border-radius: 15px 0px 0px 15px;   
+}
+.slide-bar_item{
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    padding: 30px 13px;
+    font-size: 24px;
+    color:#C16A29;
+    box-sizing: border-box;    
+}
+.slide-bar_item:link{  
+    text-decoration: none; 
+} 
+/* 点击状态的样式 */
+.on-slide-bar{
+    background:#F67D23;
+    color:#FFFFFF;
+    border-radius:15px 0px 0px 15px;
+}
+
+/*--------通用--------*/
+.common a{
+   display: inline-block;
+   visibility:hidden; 
+   width: 100%;
+   position: absolute;
+}
+
+.line-1{
+    background: url("../img/line-1.png") no-repeat;
+}
+.line-2{
+    background: url("../img/line-2.png") no-repeat;
+}
+.line-3{
+    background: url("../img/line-3.png") no-repeat;
+}
+.line-4{
+    background: url("../img/line-4.png") no-repeat;
+}
+
+.przie-item_1{
+    float: right;
+}
+.przie-item_2{
+    margin-top: 35px;
+}
+
+.money-sign{
+    display: block;
+    float: left;
+    position: relative;
+    top:34px;
+    color: #EE6827;
+    font-size: 40px;
+}
+.money-real{
+    display: block;
+    float: left;
+    color: #EE6827;
+    font-weight: 600;
+    margin:2px 0px 0px 5px; 
+    font-size: 80px;
+}
+.money-train{
+    float: left;
+    width: 100px;
+    font-weight: 600;
+    margin:8px 0px 0px 10px;  
+    color: #EE6827;
+}
+.money-huafei{
+    float: left;
+    width: 100px;
+    font-weight: 600;
+    margin: 38px 0px 0px 10px;
+    color: #EE6827; 
+}
+.licheng-now{
+    font-size: 22px;
+    text-align: center;
+    color: #EE6827;
+}
+.licheng-past{
+    font-size: 22px;
+    text-align: center;
+    color: #C0C0C0;
+    margin-top: 4px;
+    text-decoration: line-through
+}
