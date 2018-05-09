@@ -11,12 +11,12 @@ var routes = [];
 function importAll(r) {
     r.keys().map(function (t) {
         var k = t.replace(reg, ''),
-        index = k.indexOf('./'),
-        j = k.substring(index+1);
+            index = k.indexOf('./'),
+            j = k.substring(index + 1);
         routes.push({
             path: j,
-            component: require('./page'+j+'.vue'),
-            name:require('./page'+j+'.vue').getName 
+            component: require('./page' + j + '.vue'),
+            name: require('./page' + j + '.vue').getName
         })
     });
 }

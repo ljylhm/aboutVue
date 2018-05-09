@@ -1,4 +1,5 @@
 import axios from '@/axios';
+import echarts from "echarts";
 var router;
 var helper = {
 
@@ -219,8 +220,13 @@ var helper = {
             return;
         }
         axios.all(arr).then(axios.spread(callback));
-    }
+    },
 
+    // echarts实例
+    echartsInit: function (dom) {
+        console.log(echarts)
+        return echarts.init(document.querySelector(dom));
+    }
 }
 
 export default helper;

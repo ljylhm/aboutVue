@@ -4,7 +4,6 @@ module.exports = {
     entry: {
         index: "./src/index.js"
     },
-
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: 'dist/',
@@ -28,11 +27,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg|eot|woff|woff2|ttf)$/,
-                loader:'file-loader'
+                loader: 'file-loader'
             }
         ]
     },
-
 
     resolve: {
         //查找module的话从这里开始查找      
@@ -43,15 +41,15 @@ module.exports = {
         //模块别名定义，方便后续直接引用别名，无须多写长长的地址
         alias: {
             'vue$': 'vue/dist/vue.common.js',
-            '@':path.resolve(__dirname, './src/js'),
-            '@dir':path.resolve(__dirname,'./src/directive')
+            '@': path.resolve(__dirname, './src/js'),
+            '@dir': path.resolve(__dirname, './src/directive')
         }
     },
 
     devServer: {
         historyApiFallback: true,
-        host: '10.101.70.31',
-        port: 8086,
+        host: '10.101.30.91',
+        port: 8087,
         noInfo: false,
         proxy: {
             "/cube": {
@@ -59,10 +57,10 @@ module.exports = {
                 secure: false,
                 changeOrigin: true
             },
-            "/liangGetInfo":{
+            "/liangGetInfo": {
                 target: "http://10.101.70.31:3000",
                 secure: false,
-                changeOrigin: true 
+                changeOrigin: true
             }
         }
     }
